@@ -20,31 +20,24 @@ It includes a few additional items by default:
   
 ## File Layout
 
-    index.html
-    Readme.md  
-    assets/                   
-        css/  
-            - style.css                     // empty
-        fonts/                          // empty, for storing web fonts
-        images/                         // empty, for all site images
-        js/
-            - main.js                   // I almost always need at least one script file, this gets me started
-            - lib/                      // External libraries and plugins should go here
-                - jquery-3.2.1.min.js
-        sass/
-            - partials/               // all partials that nedded goes here
-                - reset.scss
-            - mixins/                 // all website's style mixins goes here
-            - style.scss              // empty
-        views/
-            - partials/               // all views partials that nedded goes here, ex: header and footer
-            - mixins/                 // all views mixins goes here
-            - index.pug
-
-## Using `.js` and `.no-js` helper classes
-
-I use a convention in this template that starts the page load with a `no-js` class attached to `html`. *(Update: Normally I have a snippet of code that does the swap from `no-js` to `js`, but thankfully Modernizr does this automatically if `no-js` exists!)* In your CSS file, you can hide JS specific elements from non-JS enabled browsers or hide elements from browsers with JS enabled. By running this in the `head`, it changes up the page before it even renders, avoiding an awkward Flash of Unstyled Content (FOUS):
-
-    .no-js .collapsed { display: block; } /* Be sure blocks are hidden if JS is disabled */
-    .js    .collapsed { display: none;  } /* With JS enabled, hide these blocks. They will be shown via JS */
-    
+    .
+    ├──index.html
+    ├──Readme.md  
+    ├── assets/                   
+    │    └── css/  
+    │    │     └── style.css     # empty css file
+    │    ├── fonts/              # empty, for storing web fonts
+    │    ├── images/             # empty, for all site images
+    │    └── js/
+    │    │    ├── main.js        # I almost always need at least one script file, this gets me started
+    │    │    └── lib/           # External libraries and plugins should go here
+    │    │    │    └── jquery-3.2.1.min.js
+    │    └── sass/
+    │    │    └── partials/      # all partials that nedded goes here
+    │    │    │    └── reset.scss
+    │    │    ├── mixins/        # all website's style mixins goes here
+    │    │    └── style.scss     # empty sass files
+    │    └── views/
+    │    │    ├── partials/      # all views partials that nedded goes here, ex: header and │footer
+    │    │    ├── mixins/        # all views mixins goes here
+    │    │    └── index.pug
